@@ -1,4 +1,4 @@
-@extends('frond.blade.php')
+@extends('frond.layout.master')
 @section('content')
 <div class="back_re">
     <div class="container">

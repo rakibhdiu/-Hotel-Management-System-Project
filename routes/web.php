@@ -21,6 +21,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/about',[AdminController::class,'about'])->name('about');
 Route::get('/blog',[AdminController::class,'blog'])->name('blog');
-Route::get('/contect',[AdminController::class,'contect'])->name('contact');
+Route::get('/contect',[AdminController::class,'contact'])->name('contact');
 Route::get('/gallery',[AdminController::class,'gallery'])->name('gallery');
 Route::get('/room',[AdminController::class,'room'])->name('room');

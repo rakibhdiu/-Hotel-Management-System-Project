@@ -10,18 +10,18 @@ class AdminController extends Controller
         return view('frond.home');
     }
     public function about(){
-        return view('frond.about');
+        return view('frond.pages.about');
     }
     public function blog(){
-        return view('frond.blog');
+        return view('frond.pages.blog');
     }
     public function contact(){
-        return view('frond.contact');
+        return view('frond.pages.contact');
     }
     public function gallery(){
-        return view('frond.gallery');
+        return view('frond.pages.gallery');
     }
     public function room(){
-        return view('frond.room');
+        return view('frond.pages.room');
     }
 }
