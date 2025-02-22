@@ -1,5 +1,7 @@
 @extends('frond.layout.master')
-
+@section('home')
+   Room
+@endsection
 @section('content')
 <div class="back_re">
     <div class="container">

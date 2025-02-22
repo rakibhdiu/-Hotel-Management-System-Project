@@ -1,4 +1,7 @@
 @extends('frond.layout.master')
+@section('home')
+   About
+@endsection
 @section('content')
 <div class="back_re">
     <div class="container">

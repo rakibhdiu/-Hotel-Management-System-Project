@@ -37,6 +37,22 @@
                          <li class="nav-item">
                             <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                          </li>
+                         @if(Auth::check())
+                         <li>
+                             <a href="{{ route('logout') }}" 
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                             </a>
+                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                 @csrf
+                             </form>
+                             <a href="{{ auth()->check() && auth()->user()->utype === 'ADM' ? route('admin.dashboard')
+                         : route('dashboard') }}">Dashboard</a>
+                         </li>
+                     @else
+                         <li><a href="{{ route('login') }}">Login</a></li>
+                         <li><a href="{{ route('register') }}">Sign up</a></li>
+                     @endif
                       </ul>
                    </div>
                 </nav>
