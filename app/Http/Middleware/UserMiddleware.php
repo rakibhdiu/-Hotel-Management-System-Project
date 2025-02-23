@@ -4,11 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
-class UserMiddleare
+class UserMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,12 +16,11 @@ class UserMiddleare
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {
+    {   
         if (!Auth::check() || Auth::user()->utype !== 'user') {
             Alert::success('Opps', 'Please Login First');
             return redirect('/');
         }
-
         return $next($request);
     }
 }

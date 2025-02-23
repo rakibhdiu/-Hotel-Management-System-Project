@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function dashboard(){
+        return view('dashboard');
+    }
     public function home(){
         return view('frond.home');
     }
@@ -14,9 +17,6 @@ class HomeController extends Controller
     }
     public function blog(){
         return view('frond.pages.blog');
-    }
-    public function contact(){
-        return view('frond.pages.contact');
     }
     public function gallery(){
         return view('frond.pages.gallery');

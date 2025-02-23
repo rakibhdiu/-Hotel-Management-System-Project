@@ -1,6 +1,7 @@
 @extends('frond.layout.master')
 
 @section('content')
+@include('sweetalert::alert')
 <section class="banner_main">
    <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
       <ol class="carousel-indicators">
