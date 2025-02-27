@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 Use App\Http\Middleware\UserMiddleware;
+use App\Models\About;
 use App\Models\Admin;
 
 Route::get('/dashboard', function () {
@@ -44,4 +46,9 @@ Route::middleware(['auth','user'])->group(function(){
 Route::middleware(['auth','admin'])->group(function(){
 Route::get('/admin/dashboard',[AdminController::class,'admindashboard'])->name('admin.dashboard');
 Route::get('/Admin/user/comment',[AdminController::class,'comment'])->name('admin.user.comment');
+
+        //---------About Page-----------//
+Route::get('/admin/add/about',[AboutController::class,'addAbout'])->name('admin.add.about');
+Route::post('/admin/about/store',[AboutController::class,'storeAbout'])->name('admin.about.store');
+
 });

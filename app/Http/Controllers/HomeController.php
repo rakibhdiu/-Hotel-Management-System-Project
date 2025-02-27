@@ -14,6 +14,7 @@ class HomeController extends Controller
     }
     public function about(){
         return view('frond.pages.about');
+    
     }
     public function blog(){
         return view('frond.pages.blog');
