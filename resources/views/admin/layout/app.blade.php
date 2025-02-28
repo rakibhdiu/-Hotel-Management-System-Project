@@ -50,6 +50,16 @@
               <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">About section</span>
             </a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="{{route('admin.add.room')}}">
+              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Room</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="{{route('admin.show.room')}}">
+              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Show Room Details</span>
+            </a>
+					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="pages-sign-up.html">

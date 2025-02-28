@@ -23,7 +23,7 @@
                </div>
                <button type="submit">Submit</button>
              </form>
-					</div>
+					</div> 
 					<div class="card-body">
 					</div>
 				</div>

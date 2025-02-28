@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,10 +12,12 @@ class HomeController extends Controller
         return view('dashboard');
     }
     public function home(){
-        return view('frond.home');
+        $about=About::all();
+        return view('frond.home',compact('about'));
     }
     public function about(){
-        return view('frond.pages.about');
+        $about=About::all();
+        return view('frond.pages.about',compact('about'));
     
     }
     public function blog(){
@@ -23,6 +27,7 @@ class HomeController extends Controller
         return view('frond.pages.gallery');
     }
     public function room(){
-        return view('frond.pages.room');
+        $rooms=Room::all();
+        return view('frond.pages.room',compact('rooms'));
     }
 }

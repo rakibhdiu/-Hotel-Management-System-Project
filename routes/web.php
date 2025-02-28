@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 Use App\Http\Middleware\UserMiddleware;
@@ -50,5 +51,10 @@ Route::get('/Admin/user/comment',[AdminController::class,'comment'])->name('admi
         //---------About Page-----------//
 Route::get('/admin/add/about',[AboutController::class,'addAbout'])->name('admin.add.about');
 Route::post('/admin/about/store',[AboutController::class,'storeAbout'])->name('admin.about.store');
-
+        //---------Room Page-----------//
+Route::get('/admin/add/room',[RoomController::class,'addRoom'])->name('admin.add.room');
+Route::post('/admin/room/store',[RoomController::class,'storeRoom'])->name('admin.room.store');
+Route::get('/admin/show/room',[RoomController::class,'showRoom'])->name('admin.show.room');
+Route::get('/admin/edit/room/{id}',[RoomController::class,'editRoom'])->name('edit.room');
+Route::post('/admin/update/room/{id}',[RoomController::class,'updateRoom'])->name('update.admin.room');
 });
