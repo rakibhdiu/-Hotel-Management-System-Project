@@ -45,57 +45,49 @@
             </a>
 					</li>
 
+					
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="{{route('admin.add.about')}}">
-              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">About section</span>
-            </a>
+						<a class="sidebar-link d-flex justify-content-between align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#bankDropdown" aria-expanded="false">
+							<div>
+								<i class="align-middle" data-feather="book"></i> 
+								<span class="align-middle">About Section</span>
+							</div>
+							<i class="align-middle" data-feather="chevron-down"></i>
+						</a>
+						<ul class="collapse list-unstyled ms-3" id="bankDropdown">
+							<li>
+								<a class="sidebar-link"  href="{{route('admin.add.about')}}">Add About</a>
+							</li>
+							<li>
+								<a class="sidebar-link" href="{{route('admin.show.room')}}">Show About</a>
+							</li>
+							<li>
+								<a class="sidebar-link" href="login.html">Edit About</a>
+							</li>
+						</ul>
 					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="{{route('admin.add.room')}}">
-              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Room</span>
-            </a>
+				<li class="sidebar-item">
+						<a class="sidebar-link d-flex justify-content-between align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#bankDropdown" aria-expanded="false">
+							<div>
+								<i class="align-middle" data-feather="book"></i> 
+								<span class="align-middle">Room Section</span>
+							</div>
+							<i class="align-middle" data-feather="chevron-down"></i>
+						</a>
+						<ul class="collapse list-unstyled ms-3" id="bankDropdown">
+							<li>
+								<a class="sidebar-link" href="{{route('admin.add.room')}}">Add Room</a>
+							</li>
+							<li>
+								<a class="sidebar-link" href="{{route('admin.show.room')}}">Show Room</a>
+							</li>
+							<li>
+								<a class="sidebar-link" href="login.html">Edit Room</a>
+							</li>
+						</ul>
 					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="{{route('admin.show.room')}}">
-              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Show Room Details</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
-              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="pages-blank.html">
-              <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-            </a>
-					</li>
-
-					<li class="sidebar-header">
-						Tools & Components
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-buttons.html">
-              <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-forms.html">
-              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-cards.html">
-              <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
+					
+				<li class="sidebar-item">
 						<a class="sidebar-link" href="ui-typography.html">
               <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
             </a>

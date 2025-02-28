@@ -70,4 +70,5 @@ class RoomController extends Controller
         return redirect()->route('admin.show.room');
 
     }
+    
 }

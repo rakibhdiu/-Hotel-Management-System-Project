@@ -5,7 +5,7 @@
 @section('admin')
 @include('sweetalert::alert')
 
-<h1 class="h3 mb-3">User Comment</h1>
+<h1 class="h3 mb-3">About Section</h1>
 
 		<div class="row">
 			<div class="col-12">

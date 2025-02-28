@@ -30,4 +30,11 @@ class HomeController extends Controller
         $rooms=Room::all();
         return view('frond.pages.room',compact('rooms'));
     }
+    public function roomDetails($id){
+        $details=Room::where('id', $id)->get();
+        return view('frond.pages.room_details',compact('details'));
+    }
+    public function storeBooking(){
+        
+    }
 }

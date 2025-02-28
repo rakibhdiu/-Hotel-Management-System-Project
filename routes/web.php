@@ -7,10 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\AdminMiddleware;
-Use App\Http\Middleware\UserMiddleware;
-use App\Models\About;
-use App\Models\Admin;
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,11 +32,13 @@ Route::get('/blog',[HomeController::class,'blog'])->name('blog');
 Route::get('/contect',[ContactController::class,'contact'])->name('contact');
 Route::get('/gallery',[HomeController::class,'gallery'])->name('gallery');
 Route::get('/room',[HomeController::class,'room'])->name('room');
+Route::get('/room/details/{id}',[HomeController::class,'roomDetails'])->name('home.room.details');
 
         //----------contact---------------//
 Route::middleware(['auth','user'])->group(function(){
     Route::get('/dashboard',[HomeController::class,'dashboard'])->name('dashboard');
     Route::post('/home/contact',[ContactController::class,'storeContact'])->name('home.contact');
+    Route::post('/booking',[HomeController::class,'storeBooking'])->name('booking');
 });
 
 
