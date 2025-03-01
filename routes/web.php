@@ -9,9 +9,7 @@ use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard',[HomeController::class,'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,7 +36,7 @@ Route::get('/room/details/{id}',[HomeController::class,'roomDetails'])->name('ho
 Route::middleware(['auth','user'])->group(function(){
     Route::get('/dashboard',[HomeController::class,'dashboard'])->name('dashboard');
     Route::post('/home/contact',[ContactController::class,'storeContact'])->name('home.contact');
-    Route::post('/booking',[HomeController::class,'storeBooking'])->name('booking');
+    Route::post('/booking/{id}',[HomeController::class,'storeBooking'])->name('booking');
 });
 
 
@@ -56,4 +54,5 @@ Route::post('/admin/room/store',[RoomController::class,'storeRoom'])->name('admi
 Route::get('/admin/show/room',[RoomController::class,'showRoom'])->name('admin.show.room');
 Route::get('/admin/edit/room/{id}',[RoomController::class,'editRoom'])->name('edit.room');
 Route::post('/admin/update/room/{id}',[RoomController::class,'updateRoom'])->name('update.admin.room');
+Route::get('/admin/booked/room',[RoomController::class,'booked'])->name('admin.booked.room');
 });

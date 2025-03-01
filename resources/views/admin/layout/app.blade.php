@@ -62,7 +62,7 @@
 								<a class="sidebar-link" href="{{route('admin.show.room')}}">Show About</a>
 							</li>
 							<li>
-								<a class="sidebar-link" href="login.html">Edit About</a>
+								<a class="sidebar-link" href="#">Edit About</a>
 							</li>
 						</ul>
 					</li>
@@ -82,14 +82,14 @@
 								<a class="sidebar-link" href="{{route('admin.show.room')}}">Show Room</a>
 							</li>
 							<li>
-								<a class="sidebar-link" href="login.html">Edit Room</a>
+								<a class="sidebar-link" href="#">Edit Room</a>
 							</li>
 						</ul>
 					</li>
 					
 				<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-typography.html">
-              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
+						<a class="sidebar-link" href="{{route('admin.booked.room')}}">
+              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Booked Room</span>
             </a>
 					</li>
 

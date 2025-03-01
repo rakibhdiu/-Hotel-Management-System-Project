@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Room;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -69,6 +70,10 @@ class RoomController extends Controller
         Alert::success('Message','Room Details Updated Successfully');
         return redirect()->route('admin.show.room');
 
+    }
+    public function booked(){
+        $booked=Booking::all();
+        return view('admin.pages.booked_room',compact('booked'));
     }
     
 }
